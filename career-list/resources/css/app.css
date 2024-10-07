@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.selected {
+    color: yellow;
+}
+                    
+.rating label {
+    transition: color 0.3s;
+}
