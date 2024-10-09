@@ -10,13 +10,12 @@ class Company extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'url',
+        'company_name',
+        'company_url',
         'application_status',
         'industry',
         'location',
         'rating',
+        'notes',
     ];
-
-    protected $table = 'companies';
 }

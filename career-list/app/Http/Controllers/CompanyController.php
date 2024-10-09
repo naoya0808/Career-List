@@ -28,7 +28,19 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'company_name' => 'required|string|max:50',
+            'company_url' => 'nullable|url|max:255',
+            'application_status' => 'nullable|string|max:50',
+            'industry' => 'nullable|string|max:50',
+            'location' => 'nullable|string|max:50',
+            'rating' => 'required|integer|between:1,5',
+            'notes' => 'nullable|string|max:255',
+        ]);
+
+        $company = Company::create($validated);
+
+        return back()->with('message','保存しました');
     }
 
     /**
