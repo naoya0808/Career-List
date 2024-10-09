@@ -7,6 +7,7 @@
 
     <div class="max-w-7xl mx-auto px-6">
         <form>
+        @csrf
             <div class="mt-4">
                 <div class="w-full flex flex-col">
                     <label for="companyname" class="font-semibold mt-4">企業名</label>
@@ -67,9 +68,11 @@
                 </div>
             </div>
 
-            <x-primary-button class="mt-8">
-                投稿する
-            </x-primary-button>
+            <div class="flex justify-center mt-8">
+                <x-primary-button>
+                    投稿する
+                </x-primary-button>
+            </div>
         </form>
     </div>
     <script src="{{ asset('build/assets/rating.js') }}"></script>

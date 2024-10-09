@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'url',
+        'application_status',
+        'industry',
+        'location',
+        'rating',
+    ];
+
+    protected $table = 'companies';
 }
