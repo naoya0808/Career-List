@@ -12,7 +12,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::select('company_name', 'application_status', 'industry', 'location', 'rating', 'created_at')->get();
+
+        return view('company.index', compact('companies'));
     }
 
     /**
@@ -37,6 +39,8 @@ class CompanyController extends Controller
             'rating' => 'required|integer|between:1,5',
             'notes' => 'nullable|string|max:255',
         ]);
+
+        $validated['user_id'] = auth()->id();
 
         $company = Company::create($validated);
 

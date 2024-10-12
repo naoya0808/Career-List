@@ -17,5 +17,10 @@ class Company extends Model
         'location',
         'rating',
         'notes',
+        'user_id'
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }
