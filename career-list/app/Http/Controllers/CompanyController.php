@@ -12,7 +12,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::select('company_name', 'application_status', 'industry', 'location', 'rating', 'created_at')->get();
+        $companies = Company::select('company_name', 'application_status', 'industry', 'location', 'rating', 'created_at')
+            ->where('user_id', auth()->id())  
+            ->get();
 
         return view('company.index', compact('companies'));
     }

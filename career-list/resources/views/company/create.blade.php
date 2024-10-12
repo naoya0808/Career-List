@@ -68,7 +68,22 @@
                         <input type="radio" name="rating" id="star5" value="5" class="hidden" onclick="updateStars(5)">
                         <label for="star5" class="cursor-pointer text-gray-300 text-5xl">★</label>
                     </div>
-                   
+                   <script>
+                        function updateStars(rating) {
+                            const stars = document.querySelectorAll('.rating label');
+                            stars.forEach((star, index) => {
+                                if (index < rating) {
+                                    star.classList.add('selected');
+                                } else {
+                                    star.classList.remove('selected');
+                                }
+                            });
+                        }
+
+                        window.onload = function() {
+                            updateStars(1);
+                        };
+                   </script>
 
                 </div>
             </div>
@@ -88,5 +103,4 @@
             </div>
         </form>
     </div>
-    <script src="{{ asset('build/assets/rating.js') }}"></script>
 </x-app-layout>
