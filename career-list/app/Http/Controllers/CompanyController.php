@@ -46,7 +46,8 @@ class CompanyController extends Controller
 
         $company = Company::create($validated);
 
-        return back()->with('message','保存しました');
+        $request->session()->flash('message', '保存しました');
+        return redirect()->route('company.index');
     }
 
     /**
@@ -62,7 +63,7 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        //
+        return view('company.edit', compact('company'));
     }
 
     /**
@@ -70,14 +71,31 @@ class CompanyController extends Controller
      */
     public function update(Request $request, Company $company)
     {
-        //
+        $validated = $request->validate([
+            'company_name' => 'required|string|max:50',
+            'company_url' => 'nullable|url|max:255',
+            'application_status' => 'nullable|string|max:50',
+            'industry' => 'nullable|string|max:50',
+            'location' => 'nullable|string|max:50',
+            'rating' => 'required|integer|between:1,5',
+            'notes' => 'nullable|string|max:255',
+        ]);
+
+        $validated['user_id'] = auth()->id();
+        
+        $company->update($validated);
+
+        $request->session()->flash('message', '更新しました');
+        return redirect()->route('company.show', compact('company'));
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Company $company)
+    public function destroy(Request $request, Company $company)
     {
-        //
+        $company->delete();
+        $request->session()->flash('message', '削除しました');
+        return redirect('company');
     }
 }

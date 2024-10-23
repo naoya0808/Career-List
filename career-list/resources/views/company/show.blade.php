@@ -6,6 +6,13 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto px-6">
+
+        @if(session('message'))
+            <div class="text-red-600 font-bold mt-2">
+                {{session('message')}}
+            </div>
+        @endif
+
         <div class="bg-white w-full">
             <div class="mt-4 p-4">
                 <div class="flex space-x-10 items-center">
@@ -15,6 +22,21 @@
                     <h2 class="border p-2 bg-gray-100">
                         {{ $company->company_url }}
                     </h2>
+                </div>
+                <div class="text-right flex justify-end">
+                    <a href="{{route('company.edit', $company)}}">
+                        <x-primary-button>
+                            編集
+                        </x-primary-button>
+                    </a>
+
+                    <form method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
+                        @csrf
+                        @method('delete')
+                        <x-primary-button class="bg-red-700 ml-2">
+                            削除
+                        </x-primary-button>
+                    </form>
                 </div>
     
                 <hr class="mt-4 w-full">
