@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Company;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,9 +16,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+        // \App\Models\Company::factory(10)->create();
+
+        $user = User::find(4);  // 既存のユーザーのIDを指定
+
+        if ($user) {
+            Company::factory(10)->create([
+                'user_id' => $user->id,
+            ]);
+        }
     }
 }

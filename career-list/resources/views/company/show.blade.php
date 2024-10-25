@@ -58,7 +58,7 @@
                     </div> 
                 </div>
     
-                <div class="mt-4 whitespace-pre-line">
+                <div class="mt-4">
                     <p class="border p-2 bg-gray-100">
                         {{ $company->notes }}
                     </p>

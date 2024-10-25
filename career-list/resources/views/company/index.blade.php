@@ -6,8 +6,9 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto px-6">
+
         @if(session('message'))
-            <div class="text-red-600 font-bold">
+            <div class="text-red-600 font-bold mt-2">
                 {{session('message')}}
             </div>
         @endif
@@ -43,5 +44,9 @@
                 </div>
             </a>
         @endforeach
+
+        <div class="mb-4">
+            {{ $companies->links() }}
+        </div>
     </div>
 </x-app-layout>

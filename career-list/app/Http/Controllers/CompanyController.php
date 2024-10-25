@@ -14,7 +14,7 @@ class CompanyController extends Controller
     {
         $companies = Company::select('id', 'company_name', 'application_status', 'industry', 'location', 'rating', 'created_at', 'user_id')
             ->where('user_id', auth()->id())  
-            ->get();
+            ->paginate(10);
 
         return view('company.index', compact('companies'));
     }
@@ -38,7 +38,7 @@ class CompanyController extends Controller
             'application_status' => 'nullable|string|max:50',
             'industry' => 'nullable|string|max:50',
             'location' => 'nullable|string|max:50',
-            'rating' => 'required|integer|between:1,5',
+            'rating' => 'nullable|integer|between:1,5',
             'notes' => 'nullable|string|max:255',
         ]);
 
@@ -77,7 +77,7 @@ class CompanyController extends Controller
             'application_status' => 'nullable|string|max:50',
             'industry' => 'nullable|string|max:50',
             'location' => 'nullable|string|max:50',
-            'rating' => 'required|integer|between:1,5',
+            'rating' => 'nullable|integer|between:1,5',
             'notes' => 'nullable|string|max:255',
         ]);
 
