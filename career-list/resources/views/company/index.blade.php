@@ -4,11 +4,11 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 企業一覧
             </h2>
-        
+            
             <div class="text-right">
                 <a href="{{ route('company.create') }}">
                     <x-primary-button>
-                        新規作成
+                        <span class="font-bold text-xl">＋</span>
                     </x-primary-button>
                 </a>
             </div>

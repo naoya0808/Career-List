@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         // \App\Models\Company::factory(10)->create();
 
-        $user = User::find(4);  // 既存のユーザーのIDを指定
+        $user = User::find(1);  // 既存のユーザーのIDを指定
 
         if ($user) {
             Company::factory(10)->create([
