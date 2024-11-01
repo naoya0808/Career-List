@@ -90,8 +90,8 @@
             </div>
 
             <div class="flex justify-center mt-8">
-                <x-primary-button>
-                    投稿する
+                <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
+                    <i class="fa-solid fa-paper-plane"></i>
                 </x-primary-button>
             </div>
         </form>

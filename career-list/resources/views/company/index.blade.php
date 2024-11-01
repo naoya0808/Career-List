@@ -7,8 +7,8 @@
             
             <div class="text-right">
                 <a href="{{ route('company.create') }}">
-                    <x-primary-button>
-                        <span class="font-bold text-xl">＋</span>
+                    <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
+                        <span><i class="fa-solid fa-plus"></i></span>
                     </x-primary-button>
                 </a>
             </div>
@@ -32,13 +32,13 @@
                     </h1>
                     <hr class="w-full">
                     <div class="flex space-x-10 mt-4">
-                        <p class="border p-2 bg-gray-100">
+                        <p class="border p-2 bg-gray-100 font-semibold">
                             {{ $company->application_status }}
                         </p>
-                        <p class="border p-2 bg-gray-100">
+                        <p class="border p-2 bg-gray-100 font-semibold">
                             {{ $company->industry }}
                         </p>
-                        <p class="border p-2 bg-gray-100">
+                        <p class="border p-2 bg-gray-100 font-semibold">
                             {{ $company->location }}
                         </p>
                         <div class="rating flex justify-center mt-1">

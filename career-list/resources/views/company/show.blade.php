@@ -20,13 +20,15 @@
                         {{ $company->company_name }}
                     </h1>
                     <h2 class="border p-2 bg-gray-100">
-                        {{ $company->company_url }}
+                        <a href="{{ $company->company_url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+                            {{ $company->company_url }}
+                        </a>
                     </h2>
                 </div>
                 <div class="text-right flex justify-end">
                     <a href="{{route('company.edit', $company)}}">
-                        <x-primary-button>
-                            編集
+                        <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
+                            <i class="fa-solid fa-pen"></i>
                         </x-primary-button>
                     </a>
 
@@ -34,7 +36,7 @@
                         @csrf
                         @method('delete')
                         <x-primary-button class="bg-red-700 ml-2">
-                            削除
+                            <i class="fa-solid fa-trash"></i>
                         </x-primary-button>
                     </form>
                 </div>
@@ -42,13 +44,13 @@
                 <hr class="mt-4 w-full">
                 
                 <div class="flex space-x-10 mt-4">
-                    <p class="border p-2 bg-gray-100">
+                    <p class="border p-2 bg-gray-100 font-semibold">
                         {{ $company->application_status }}
                     </p>
-                    <p class="border p-2 bg-gray-100">
+                    <p class="border p-2 bg-gray-100 font-semibold">
                         {{ $company->industry }}
                     </p>
-                    <p class="border p-2 bg-gray-100">
+                    <p class="border p-2 bg-gray-100 font-semibold">
                         {{ $company->location }}
                     </p>
                     <div class="rating flex justify-center mt-1">
