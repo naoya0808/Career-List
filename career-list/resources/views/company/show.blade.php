@@ -1,11 +1,6 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            個別表示
-        </h2>
-    </x-slot>
 
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-4xl mx-auto px-6 pt-10">
 
         @if(session('message'))
             <div class="text-red-600 font-bold mt-2">
@@ -13,55 +8,65 @@
             </div>
         @endif
 
-        <div class="bg-white w-full">
-            <div class="mt-4 p-4">
-                <div class="flex space-x-10 items-center">
-                    <h1 class="text-lg font-semibold">
-                        {{ $company->company_name }}
-                    </h1>
-                    <h2 class="border p-2 bg-gray-100">
-                        <a href="{{ $company->company_url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
-                            {{ $company->company_url }}
-                        </a>
-                    </h2>
-                </div>
-                <div class="text-right flex justify-end">
-                    <a href="{{route('company.edit', $company)}}">
-                        <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
-                            <i class="fa-solid fa-pen"></i>
-                        </x-primary-button>
-                    </a>
+        <div class="bg-white w-full border border-turquoise mt-4 rounded-xl">
+            <div class="py-4 px-10">
 
-                    <form method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
-                        @csrf
-                        @method('delete')
-                        <x-primary-button class="bg-red-700 ml-2">
-                            <i class="fa-solid fa-trash"></i>
-                        </x-primary-button>
-                    </form>
-                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex space-x-10 items-center">
+                        <h1 class="text-lg font-semibold">
+                            {{ $company->company_name }}
+                        </h1>
+                        <h2 class="p-2">
+                            <a href="{{ $company->company_url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+                                {{ $company->company_url }}
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="text-right flex justify-end">
+                        <a href="{{route('company.edit', $company)}}">
+                            <x-primary-button class="bg-turquoise hover:bg-dark_turquoise">
+                                <i class="fa-solid fa-pen"></i>
+                            </x-primary-button>
+                        </a>
     
-                <hr class="mt-4 w-full">
+                        <form method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
+                            @csrf
+                            @method('delete')
+                            <x-primary-button class="bg-red-500 ml-2 hover:bg-red-800">
+                                <i class="fa-solid fa-trash"></i>
+                            </x-primary-button>
+                        </form>
+                    </div>
+                </div>
+
+                <hr class="mt-4 border-turquoise border-t mx-[-2.5rem] w-[calc(100%+5rem)]">
                 
                 <div class="flex space-x-10 mt-4">
-                    <p class="border p-2 bg-gray-100 font-semibold">
+                    <p class="p-2 font-semibold">
+                        <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                         {{ $company->application_status }}
                     </p>
-                    <p class="border p-2 bg-gray-100 font-semibold">
+                    <p class="p-2 font-semibold">
+                        <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                         {{ $company->industry }}
                     </p>
-                    <p class="border p-2 bg-gray-100 font-semibold">
+                    <p class="p-2 font-semibold">
+                        <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                         {{ $company->location }}
                     </p>
-                    <div class="rating flex justify-center mt-1">
+                    <div class="rating flex justify-center">
                         @for ($i = 1; $i <= $company->rating; $i++)
                             <label class="cursor-pointer  text-3xl selected">★</label>
                         @endfor
                     </div> 
                 </div>
     
-                <div class="mt-4">
-                    <p class="border p-2 bg-gray-100">
+                <div class="mt-4 p-2 flex items-start space-x-2">
+                    <p>
+                        <i class="fa-solid fa-square fa-xs text-turquoise"></i>
+                    </p>
+                    
+                    <p>
                         {{ $company->notes }}
                     </p>
                 </div>

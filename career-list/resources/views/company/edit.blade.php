@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6 pt-10">
 
         @if(session('message'))
             <div class="text-red-600 font-bold">
@@ -14,7 +14,7 @@
                 <div class="w-full flex flex-col">
                     <label for="company_name" class="font-semibold mt-4">企業名</label>
                     <x-input-error :messages="$errors->get('company_name')" class="mt-2" />
-                    <input type="text" name="company_name" class="w-auto py-2 border border-gray-300 rounded-md" id="company_name" value="{{old('company_name', $company->company_name)}}">
+                    <input type="text" name="company_name" class="w-auto py-2 border border-turquoise rounded-xl" id="company_name" value="{{old('company_name', $company->company_name)}}">
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
                 <div class="w-full flex flex-col">
                     <label for="company_url" class="font-semibold mt-4">URL</label>
                     <x-input-error :messages="$errors->get('company_url')" class="mt-2" />
-                    <input type="text" name="company_url" class="w-auto py-2 border border-gray-300 rounded-md" id="company_url" value="{{old('company_url',  $company->company_url)}}">
+                    <input type="text" name="company_url" class="w-auto py-2 border border-turquoise rounded-xl" id="company_url" value="{{old('company_url',  $company->company_url)}}">
                 </div>
             </div>
 
@@ -31,19 +31,19 @@
                     <div class="flex flex-col w-1/4">
                         <label for="application_status" class="font-semibold">応募状況</label>
                         <x-input-error :messages="$errors->get('application_status')" class="mt-2" />
-                        <input type="text" name="application_status" class="py-2 border border-gray-300 rounded-md" id="application_status" value="{{old('application_status', $company->application_status)}}">
+                        <input type="text" name="application_status" class="py-2 border border-turquoise rounded-xl" id="application_status" value="{{old('application_status', $company->application_status)}}">
                     </div>
             
                     <div class="flex flex-col w-1/4">
                         <label for="industry" class="font-semibold">業界</label>
                         <x-input-error :messages="$errors->get('industry')" class="mt-2" />
-                        <input type="text" name="industry" class="py-2 border border-gray-300 rounded-md" id="industry" value="{{old('industry', $company->industry)}}">
+                        <input type="text" name="industry" class="py-2 border border-turquoise rounded-xl" id="industry" value="{{old('industry', $company->industry)}}">
                     </div>
                     
                     <div class="flex flex-col w-1/4">
                         <label for="location" class="font-semibold">勤務地</label>
                         <x-input-error :messages="$errors->get('location')" class="mt-2" />
-                        <input type="text" name="location" class="py-2 border border-gray-300 rounded-md" id="location" value="{{old('location', $company->location)}}">
+                        <input type="text" name="location" class="py-2 border border-turquoise rounded-xl" id="location" value="{{old('location', $company->location)}}">
                     </div>
 
 
@@ -86,12 +86,12 @@
                 <div class="w-full flex flex-col">
                     <label for="notes" class="font-semibold mt-4">備考欄</label>
                     <x-input-error :messages="$errors->get('notes')" class="mt-2" />
-                    <textarea name="notes" class="w-auto py-2 border border-gray-300 rounded-md" id="notes" cols="30" rows="5">{{old('notes', $company->notes)}}</textarea>
+                    <textarea name="notes" class="w-auto py-2 border border-turquoise rounded-xl" id="notes" cols="30" rows="5">{{old('notes', $company->notes)}}</textarea>
                 </div>
             </div>
 
             <div class="flex justify-center mt-8">
-                <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
+                <x-primary-button class="bg-turquoise hover:bg-very_dark_turquoise">
                     <i class="fa-solid fa-paper-plane"></i>
                 </x-primary-button>
             </div>

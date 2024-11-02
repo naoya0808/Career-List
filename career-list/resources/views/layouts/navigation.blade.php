@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('company.index')" :active="request()->routeIs('company.index')">
-                        <i class="fa-solid fa-list text-dark_turquoise"></i>
+                        <i class="fa-solid fa-list fa-xl text-turquoise border border-turquoise py-6 px-4 rounded-xl bg-light_turquoise"></i>
                     </x-nav-link>
                 </div>
             </div>

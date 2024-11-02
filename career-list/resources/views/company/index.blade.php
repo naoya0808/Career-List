@@ -1,22 +1,14 @@
 <x-app-layout>
-    <x-slot name="header">
-        <div class="flex justify-between items-center">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                企業一覧
-            </h2>
-            
-            <div class="text-right">
-                <a href="{{ route('company.create') }}">
-                    <x-primary-button class="bg-dark_turquoise hover:bg-very_dark_turquoise">
-                        <span><i class="fa-solid fa-plus"></i></span>
-                    </x-primary-button>
-                </a>
-            </div>
-        </div>
 
-    </x-slot>
+    <div class="fixed top-20 right-20">
+        <a href="{{ route('company.create') }}">
+            <x-primary-button class="bg-turquoise hover:bg-dark_turquoise">
+                <i class="fa-solid fa-plus"></i>
+            </x-primary-button>
+        </a>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-4xl mx-auto px-6 pt-4">
 
         @if(session('message'))
             <div class="text-red-600 font-bold mt-2">
@@ -26,19 +18,22 @@
 
         @foreach ($companies as $company)
             <a href="{{route('company.show', $company)}}">
-                <div class="mt-4 p-8 bg-white w-full">
-                    <h1 class="p-4 text-lg font-semibold">
+                <div class="mt-4 p-4 bg-white w-full border border-turquoise rounded-xl">
+                    <h1 class="mb-4 ml-4 text-lg font-semibold">
                         {{ $company->company_name }}
                     </h1>
-                    <hr class="w-full">
+                    <hr class="w-[calc(100%+2rem)] -mx-4 border-turquoise">
                     <div class="flex space-x-10 mt-4">
-                        <p class="border p-2 bg-gray-100 font-semibold">
+                        <p class="p-2 font-semibold">
+                            <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                             {{ $company->application_status }}
                         </p>
-                        <p class="border p-2 bg-gray-100 font-semibold">
+                        <p class="p-2 font-semibold">
+                            <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                             {{ $company->industry }}
                         </p>
-                        <p class="border p-2 bg-gray-100 font-semibold">
+                        <p class="p-2 font-semibold">
+                            <i class="fa-solid fa-square fa-xs text-turquoise"></i>
                             {{ $company->location }}
                         </p>
                         <div class="rating flex justify-center mt-1">
@@ -56,7 +51,7 @@
             </a>
         @endforeach
 
-        <div class="mb-4">
+        <div class="mt-4 pb-4">
             {{ $companies->links() }}
         </div>
     </div>

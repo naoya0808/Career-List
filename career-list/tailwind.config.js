@@ -15,8 +15,9 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                dark_turquoise: '#00CED1',
-                very_dark_turquoise: '#008285',
+                turquoise: '#00CED1',
+                dark_turquoise: '#008285',
+                light_turquoise: '#ADFEFF',
             },
         },
     },
