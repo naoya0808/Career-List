@@ -8,7 +8,7 @@
             </div>
         @endif
 
-        <div class="bg-white w-full border border-turquoise mt-4 rounded-xl">
+        <div class="bg-light_navy w-full border-2 border-turquoise mt-4 rounded-xl">
             <div class="py-4 px-10">
 
                 <div class="flex items-center justify-between">
@@ -17,7 +17,7 @@
                             {{ $company->company_name }}
                         </h1>
                         <h2 class="p-2">
-                            <a href="{{ $company->company_url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+                            <a href="{{ $company->company_url }}" target="_blank" rel="noopener noreferrer" class="text-turquoise underline">
                                 {{ $company->company_url }}
                             </a>
                         </h2>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <hr class="mt-4 border-turquoise border-t mx-[-2.5rem] w-[calc(100%+5rem)]">
+                <hr class="mt-4 border border-turquoise border-t mx-[-2.5rem] w-[calc(100%+5rem)]">
                 
                 <div class="flex space-x-10 mt-4">
                     <p class="p-2 font-semibold">

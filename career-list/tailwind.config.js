@@ -18,6 +18,8 @@ export default {
                 turquoise: '#00CED1',
                 dark_turquoise: '#008285',
                 light_turquoise: '#ADFEFF',
+                navy: '#213A4F',
+                light_navy: '#335775',
             },
         },
     },

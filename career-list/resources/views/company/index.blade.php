@@ -18,11 +18,11 @@
 
         @foreach ($companies as $company)
             <a href="{{route('company.show', $company)}}">
-                <div class="mt-4 p-4 bg-white w-full border border-turquoise rounded-xl">
+                <div class="mt-4 p-4 bg-light_navy w-full border-2 border-turquoise rounded-xl">
                     <h1 class="mb-4 ml-4 text-lg font-semibold">
                         {{ $company->company_name }}
                     </h1>
-                    <hr class="w-[calc(100%+2rem)] -mx-4 border-turquoise">
+                    <hr class="w-[calc(100%+2rem)] -mx-4 border border-turquoise">
                     <div class="flex space-x-10 mt-4">
                         <p class="p-2 font-semibold">
                             <i class="fa-solid fa-square fa-xs text-turquoise"></i>
@@ -42,7 +42,7 @@
                             @endfor
                         </div>                    
                     </div>
-                    <div class="p-4 text-sm font-semibold">
+                    <div class="p-4 text-sm font-semibold text-right">
                         <p>
                             {{ $company->created_at }} / {{ $company->user->name }}
                         </p>
