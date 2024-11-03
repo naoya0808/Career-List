@@ -29,13 +29,26 @@
                             </x-primary-button>
                         </a>
     
-                        <form method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
+                        <form id="delete-form" method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
                             @csrf
                             @method('delete')
-                            <x-primary-button class="bg-red-500 ml-2 hover:bg-red-800">
+                            <x-primary-button class="bg-red-500 ml-2 hover:bg-red-800" onclick="confirmDeletion()" type="button" id="delete-button">
                                 <i class="fa-solid fa-trash"></i>
                             </x-primary-button>
                         </form>
+
+
+                        <script>
+                            document.getElementById('delete-button').addEventListener('click', function () {
+                                if (confirm("本当に削除してよろしいですか？")) {
+                                    document.getElementById('delete-form').submit();
+                                } else {
+                                    this.blur();
+                                }
+                            });
+                        </script>
+
+
                     </div>
                 </div>
 
