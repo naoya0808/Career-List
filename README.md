@@ -47,4 +47,4 @@ CareerListは、就職活動や転職活動の際に、自分の受けている�
 
 ## ER図
 
-<img width="675" alt="スクリーンショット 2024-11-05 2 02 00" src="https://github.com/user-attachments/assets/479491fd-52ff-4b61-a691-2ab9bc14cdf0">
+<img width="670" alt="スクリーンショット 2024-11-05 22 16 52" src="https://github.com/user-attachments/assets/a1f55a10-ef11-46b4-8748-f52fc4a47cfc">
