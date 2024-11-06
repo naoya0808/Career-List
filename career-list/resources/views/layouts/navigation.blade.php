@@ -5,8 +5,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="{{ route('company.index') }}">
+                        <img src="{{ asset('img/Logo.png') }}" class="rounded-full" width="50" height="50" />
                     </a>
                 </div>
 
@@ -24,13 +24,6 @@
                     <x-slot name="trigger">
                         <button class="text-turquoise hover:text-dark_turquoise focus:outline-none transition ease-in-out duration-150">
                             <i class="fa-solid fa-user fa-xl"></i>
-                            {{-- <div>{{ Auth::user()->name }}</div>
-
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div> --}}
                         </button>
                     </x-slot>
 
@@ -53,8 +46,7 @@
                             </form>
 
                         </div>
-                    </x-slot>
-                    
+                    </x-slot>                    
                 </x-dropdown>
             </div>
 

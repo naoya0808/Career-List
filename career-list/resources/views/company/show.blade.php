@@ -32,11 +32,10 @@
                         <form id="delete-form" method="post" action="{{route('company.destroy', $company)}}" class="flex-2">
                             @csrf
                             @method('delete')
-                            <x-primary-button class="bg-red-500 ml-2 hover:bg-red-800" onclick="confirmDeletion()" type="button" id="delete-button">
+                            <button type="button" onclick="confirmDeletion()" id="delete-button" class="inline-flex items-center px-6 py-3 bg-red-500 border border-transparent rounded-full uppercase tracking-widest hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2  transition ease-in-out duration-150 ml-2">
                                 <i class="fa-solid fa-trash"></i>
-                            </x-primary-button>
+                            </button>
                         </form>
-
 
                         <script>
                             document.getElementById('delete-button').addEventListener('click', function () {
