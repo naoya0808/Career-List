@@ -1,6 +1,6 @@
 # CareerList（キャリアリスト）
 
-<img width="1440" alt="スクリーンショット 2024-11-07 17 05 48" src="https://github.com/user-attachments/assets/730fbbdf-7632-44ae-ba2a-a9784c3ec917">
+<img width="1440" alt="スクリーンショット 2024-11-07 18 52 59" src="https://github.com/user-attachments/assets/bf692dd1-4f88-4ba6-a3ac-c147a41a72c8">
 
 ## サービス概要
 
