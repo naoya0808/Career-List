@@ -85,7 +85,7 @@
             </div>
 
             <div class="flex justify-center mt-8">
-                <x-primary-button class="bg-turquoise hover:bg-very_dark_turquoise">
+                <x-primary-button class="bg-turquoise hover:bg-dark_turquoise">
                     <i class="fa-solid fa-paper-plane"></i>
                 </x-primary-button>
             </div>

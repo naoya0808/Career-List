@@ -7,16 +7,16 @@
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-label for="email" :value="__('Email')" class="text-white"/>
+            <x-text-input id="email" class="block mt-1 w-full text-white bg-navy rounded-xl border border-turquoise focus:ring-2 focus:ring-red-500 focus:outline-none focus:border-transparent focus:bg-navy" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+            <x-input-label for="password" :value="__('Password')" class="text-white" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="block mt-1 w-full text-white bg-navy rounded-xl border border-turquoise focus:ring-2 focus:ring-red-500 focus:outline-none focus:border-transparent focus:bg-navy"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
@@ -27,19 +27,19 @@
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <input id="remember_me" type="checkbox" class="rounded bg-navy border-turquoise text-turquoise shadow-sm focus:ring-turquoise" name="remember">
+                <span class="ms-2 text-sm text-white">{{ __('Remember me') }}</span>
             </label>
         </div>
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                <a class="underline text-sm text-white hover:text-turqoise rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-turqoise" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
+            <x-primary-button class="ms-3 hover:bg-dark_turquoise">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>

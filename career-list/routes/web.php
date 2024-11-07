@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
 
 // Route::get('/dashboard', function () {
