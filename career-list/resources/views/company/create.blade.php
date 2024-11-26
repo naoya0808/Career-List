@@ -40,7 +40,7 @@
                     </div>
 
 
-                    <div class="rating flex justify-center w-1/4 mt-6 ">
+                    <div class="rating flex justify-center w-1/4 mt-6">
                         <input type="radio" name="rating" id="star1" value="1" class="hidden" onclick="updateStars(1)">
                         <label for="star1" class="cursor-pointer text-light_navy text-5xl">★</label>
                     

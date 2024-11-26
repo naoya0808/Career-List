@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 
+URL::forceScheme('https');
+
 Route::get('/', function () {
     return view('welcome2');
 });
