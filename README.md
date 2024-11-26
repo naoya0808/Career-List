@@ -1,5 +1,7 @@
 # CareerList（キャリアリスト）
 
+https://career-list.fly.dev/
+
 <img width="1440" alt="スクリーンショット 2024-11-07 18 52 59" src="https://github.com/user-attachments/assets/bf692dd1-4f88-4ba6-a3ac-c147a41a72c8">
 
 ## サービス概要

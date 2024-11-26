@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for career-list-x on 2024-11-25T22:15:12+09:00
+# fly.toml app configuration file generated for career-list on 2024-11-26T21:01:33+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'career-list-x'
+app = 'career-list'
 primary_region = 'nrt'
 console_command = 'php /var/www/html/artisan tinker'
 
