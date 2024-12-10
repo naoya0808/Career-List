@@ -19,3 +19,5 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+/config/database.php
+/app/Providers/AppServiceProvider.php
